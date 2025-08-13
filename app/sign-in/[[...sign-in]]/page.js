@@ -1,0 +1,16 @@
+import { SignIn } from "@clerk/nextjs";
+
+export const metadata = {
+  title: "Sign-in",
+  alternates: {
+    canonical: "/sign-in",
+  },
+};
+
+export default function SignInPage() {
+  return (
+    <div className=" flex justify-center pt-[6rem]">
+      <SignIn />
+    </div>
+  );
+}

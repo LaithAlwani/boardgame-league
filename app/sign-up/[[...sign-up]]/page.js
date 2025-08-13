@@ -1,0 +1,14 @@
+import { SignUp } from '@clerk/nextjs'
+
+export const metadata = {
+  title: "Sign-up",
+  alternates: {
+    canonical: "/sign-up",
+  },
+  
+};
+export default function SignUpPage() {
+  return (
+    <div className='flex justify-center pt-[6rem]'><SignUp /></div>
+  )
+}
