@@ -18,24 +18,6 @@ const userSchema = new Schema(
     last_name: String,
     image: String,
     avatar: String,
-
-    plays: [{
-      type: Schema.Types.ObjectId,
-      ref:"Session"
-    }]
-
-    // leagues: [
-    //   {
-    //     type: Schema.Types.ObjectId,
-    //     ref: "League",
-    //   },
-    // ],
-    // sessions: [
-    //   {
-    //     type: Schema.Types.ObjectId,
-    //     ref: "Session",
-    //   },
-    // ],
   },
   { timestamps: true }
 );
