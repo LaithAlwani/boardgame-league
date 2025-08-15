@@ -22,11 +22,10 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <body
+          className={`w-screen mx-auto min-h-svh ${geistSans.variable} ${geistMono.variable} antialiased`}>
           <Navbar />
-          <main className="w-screen mx-auto min-h-svh">
-            {children}
-          </main>
+          {children}
         </body>
       </html>
     </ClerkProvider>

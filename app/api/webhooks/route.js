@@ -52,20 +52,19 @@ export async function POST(req) {
   const { id } = evt.data
   const eventType = evt.type
   if (evt.type === 'user.created') {
-    console.log('User created event received:', evt.data)
     await connectToDB();
     const user = {
       username:evt.data.username,
-      email_address: evt.data.email_addresses[0].email_address,
+      email: evt.data.email_addresses[0].email_address,
       first_name:evt.data.first_name,
       last_name: evt.data.last_name,
       avatar: evt.data.image_url,
       clerk_id:evt.data.id
     }
+    console.log(user)
     await User.create(user);
   }
   console.log(`Received webhook with ID ${id} and event type of ${eventType}`)
-  // console.log('Webhook payload:', body)
 
   return new Response('Webhook received', { status: 200 })
 }
