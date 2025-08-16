@@ -32,11 +32,11 @@ export default function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className=" w-full p-3 shadow-sm z-50 bg-slate-700 text-white">
+    <nav className="relative w-full p-3 shadow-sm z-50 bg-slate-700 text-white">
       <div className="flex justify-end items-center mx-auto">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-1 mr-auto">
-          <img src="/logo.webp" alt="logo" className="w-8 h-8 object-contain" />
+          <img src="/icons/icon-96x96.png" alt="logo" className="w-8 h-8 object-contain" />
           <span className="text-xl font-bold">OBL</span>
         </Link>
 
