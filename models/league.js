@@ -12,7 +12,15 @@ const leagueSchema = new Schema(
           type: Schema.Types.ObjectId,
           ref: "User",
         },
-        score: {
+        games_played: {
+          type: Number,
+          default: 0,
+        },
+        wins: {
+          type: Number,
+          default: 0,
+        },
+        points: {
           type: Number,
           default: 0,
         },
@@ -32,17 +40,7 @@ const leagueSchema = new Schema(
     },
     fees: {
       type: Number,
-      default:45
-    },
-    sessions: [
-      {
-        type: Schema.Types.ObjectId,
-        red: "Session",
-      },
-    ],
-    status: {
-      type: String,
-      default: "has not started",
+      default:40
     },
   },
   { timestamps: true }

@@ -1,13 +1,11 @@
 "use client";
-
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SignedIn, SignedOut, UserButton, useUser, ClerkLoading } from "@clerk/nextjs";
 import { FaUserLock } from "react-icons/fa";
 import { MdContactSupport, MdHome, MdInfo, MdLogin } from "react-icons/md";
-import { ImBubbles } from "react-icons/im";
-import { GiOpenBook } from "react-icons/gi";
+import { GiOpenBook, GiMeepleKing } from "react-icons/gi";
 import { FiMenu, FiX } from "react-icons/fi";
 
 export default function Navbar() {
@@ -18,8 +16,8 @@ export default function Navbar() {
 
   const links = [
     { href: "/", label: "Home", icon: <MdHome size={size} /> },
-    { href: "/leagues", label: "Leagues", icon: <ImBubbles size={size} /> },
-    { href: "/boardgames", label: "Board Games", icon: <GiOpenBook size={size} /> },
+    { href: "/leagues", label: "Leagues", icon: <GiMeepleKing size={size} /> },
+    // { href: "/boardgames", label: "Board Games", icon: <GiOpenBook size={size} /> },
     { href: "/about", label: "About", icon: <MdInfo size={size} /> },
     { href: "/contact", label: "Contact", icon: <MdContactSupport size={size} /> },
   ];
