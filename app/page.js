@@ -1,13 +1,13 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="fixed top-0 left-0 w-full h-svh bg-red-400" >
-      <img src={"/carcassonne.webp"} className="h-[100%] object-cover opacity-75 -z-10" />
-      <div className="absolute inset-0">
-        <h1>Ottawa Boardgame Leauge</h1>
-        <p>Welcome to the Ottawa Boardgame League!</p>
+    <main className="relative -mt-18  w-full -z-10 " >
+      <img src={"/carcassonne.webp"} className="w-[100%] h-[100svh]  object-cover opacity-75 " />
+      <div className="absolute top-0 mt-96 text-center w-full px-2 ">
+        <h1 className="text-3xl text-white font-bold ">Ottawa Boardgame Leauge</h1>
+        <p className="text-lg text-white italic">Welcome to the Ottawa Boardgame League!</p>
+        <Link href={"/leagues"} className="inline-block bg-slate-700 text-white p-2 my-3 rounded-sm ">Leagues</Link>
       </div>
     </main>
   );

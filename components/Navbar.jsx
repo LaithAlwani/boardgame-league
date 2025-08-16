@@ -66,7 +66,7 @@ export default function Navbar() {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 pt-[2rem] z-10 bg-slate-700 shadow-lg 
+        className={` md:hidden fixed top-0 right-0 h-full w-64 pt-[2rem] z-10 bg-slate-700 shadow-lg 
           transform transition-transform duration-300 ease-in-out 
           ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
@@ -76,7 +76,7 @@ export default function Navbar() {
           ))}
 
           <SignedIn>
-            <div className=" flex flex-col items-center gap-4">
+            <div className=" flex items-center gap-4">
               <UserButton /> <span className="text-sm">Settings</span>
             </div>
           </SignedIn>
